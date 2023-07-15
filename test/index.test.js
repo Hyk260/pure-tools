@@ -1,5 +1,6 @@
-const { sum } = require('../dist/tools.umd');
+// const { sum } = require('../src/test')
+import { sum } from '../src/test'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(2, 1)).toBe(3);
+test('adds 1 + 1 to equal 2', () => {
+  expect(sum(1, 1)).toBe(2);
 });

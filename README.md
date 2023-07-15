@@ -1,12 +1,6 @@
 ### 🎨 目录结构
 
 ```
-├── .vscode                    // 编辑器配置
-├── src                        // 源代码
-│   ├── api                    // 所有请求
-│   ├── main.js                // 入口 加载组件 初始化等
-├── browserslistrc             // 配置兼容浏览器
-└── vue.config.js              // vue配置文件
 
 ├── bin  // 用于存放可执行二进制文件的目录
 ├── dist(lib)  // 产物输出目录
@@ -16,8 +10,7 @@
 ├── test // 单元测试
 ├── docs // 文档说明
 ├── package.json  // 任务包含Json文件的内容。这些Json文件应自动处理为目录。
-├── README.md // 包说明，会在npm展示
-└── ...  // 一些配置文件（eg: eslint、babel）
+├── README.md // 包说明
 
 ```
 
