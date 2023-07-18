@@ -1,5 +1,5 @@
 {
-  "name": "@pureadmin/tools",
+  "name": "pure-tools",
   "version": "0.0.1",
   "description": "tools",
   "main": "dist/tools.umd.js",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hyk260/pureadmin-tools.git"
+    "url": "https://github.com/Hyk260/pure-tools.git"
   },
   "keywords": [
-    "@pureadmin/tools",
+    "pure-tools",
     "es6"
   ],
   "scripts": {

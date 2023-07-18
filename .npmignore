@@ -1,10 +1,10 @@
 node_modules
-test
+/public
+scripts
 src
+test
 .babelrc.js
 .eslintrc.js
-scripts
-docs
-.czrc
 .eslintignore
+webpack.config.js
 .huskyrc
