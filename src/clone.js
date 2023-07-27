@@ -76,10 +76,10 @@ export function deepClone(target, map = new WeakMap()) {
 }
 
 const map = new Map();
-map.set("name", "botaoxy");
+map.set("name", "tools");
 
 const set = new Set();
-set.add("billows");
+set.add("text");
 
 const obj = {
   field: 1,
@@ -99,7 +99,7 @@ const obj = {
   reg: /\d+/,
   error: new Error(),
   fun: () => {
-    console.log("Hello Botaoxy!");
+    console.log("Hello!");
   },
   fun1: function (a, b) {
     return a + b;
