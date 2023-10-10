@@ -4,6 +4,7 @@ module.exports = {
   mode: 'production', // 如果想生成 mini JS 就配置为 production
   entry: './src/index.js',
   externals: 'lodash',
+  optimization: { minimize: false }, // 不压缩不混淆
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: 'PureTools.js', // 打包后的文件名
