@@ -1,5 +1,5 @@
 const hello = 'hello'
-const world = 'world';
+const world = 'world'
 
 export function sum(a, b) {
   return a + b

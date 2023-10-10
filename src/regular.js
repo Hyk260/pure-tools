@@ -5,16 +5,16 @@
  * @returns {string} - 移除了所有匹配模式并去除首尾空白字符后的结果字符串。
  */
 export function replaceCustomText(str, pattern) {
-  const regex = new RegExp(pattern, 'g');
-  return str.replace(regex, '').trim();
+  const regex = new RegExp(pattern, 'g')
+  return str.replace(regex, '').trim()
 }
 // 匹配数字
 export function isNumeric(str) {
-  return /^[0-9]+$/.test(str);
+  return /^[0-9]+$/.test(str)
 }
 // 匹配中文
 export function isChineseCharacter(str) {
-  return /[\u4e00-\u9fa5]+/.test(str);
+  return /[\u4e00-\u9fa5]+/.test(str)
 }
 /**
  * 去除字符串中的 HTML 标签
@@ -22,9 +22,9 @@ export function isChineseCharacter(str) {
  * @returns {string} - 去除 HTML 标签后的纯文本字符串
  */
 export function removeHtmlTags(str) {
-  const regex = /<[^>]+>/g;
-  const result = str.replace(regex, '');
-  return result;
+  const regex = /<[^>]+>/g
+  const result = str.replace(regex, '')
+  return result
 }
 /**
  * 判断字符串是否包含指定内容
@@ -33,6 +33,6 @@ export function removeHtmlTags(str) {
  * @returns {boolean} - 是否包含目标字符串
  */
 export function containsString(str, target) {
-  const regex = new RegExp(target, 'g');
-  return regex.test(str);
+  const regex = new RegExp(target, 'g')
+  return regex.test(str)
 }

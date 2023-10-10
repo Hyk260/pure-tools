@@ -23,7 +23,7 @@
     "test": "jest",
     "lint": "eslint --fix src"
   },
-  "author": "ljxhyk",
+  "author": "Hyk260",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.8",
@@ -56,8 +56,5 @@
   },
   "jest": {
     "preset": "rollup-jest"
-  },
-  "dependencies": {
-    "typescript": "^5.1.6"
   }
 }
