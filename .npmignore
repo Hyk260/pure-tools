@@ -7,6 +7,7 @@ test
 .babelrc.js
 .eslintrc.js
 .eslintignore
+tsconfig.json
 babel.config.js
 webpack.config.js
 .huskyrc
