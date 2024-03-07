@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   mode: 'production', // 如果想生成 mini JS 就配置为 production
-  entry: './src/index.js',
+  entry: './src/index.js', // 入口
   externals: 'lodash',
   optimization: { minimize: false }, // 不压缩混淆
   output: {

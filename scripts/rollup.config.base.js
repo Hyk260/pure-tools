@@ -8,7 +8,6 @@ import { babel } from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import clear from 'rollup-plugin-clear'
 import { name, version, author } from '../package.json'
-// import path from 'path'
 
 const pkgName = 'tools'
 const banner =
