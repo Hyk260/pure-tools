@@ -4,7 +4,7 @@
  * @param {string} format - 指定的日期格式，例如：'yyyy-MM-dd hh:mm:ss'
  * @return {string} 格式化后的日期字符串
  */
-const formatDate = function(date, format) {
+function formatDate(date, format) {
   const options = {
     'M+': date.getMonth() + 1, // 月份
     'd+': date.getDate(), // 日
@@ -41,7 +41,7 @@ const formatDate = function(date, format) {
  * @param {boolean} mustIncludeTime - 是否强制显示时间，为 true 时将在返回结果中追加“时:分”形式的时间字符串
  * @returns {string} - 格式化后的字符串
  */
-export function timeFormat(timestamp, mustIncludeTime = false) {
+export function timeFormat (timestamp, mustIncludeTime = false) {
   const currentDate = new Date()
   const srcDate = new Date(parseInt(timestamp))
   const currentYear = currentDate.getFullYear()

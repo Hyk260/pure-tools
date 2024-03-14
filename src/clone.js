@@ -4,7 +4,7 @@
  * @return {*}
  * isType('Array',[])
  */
-export function isType(type, val) {
+export function isType (type, val) {
   return Object.prototype.toString.call(val) === `[object ${type}]`
 }
 
@@ -14,7 +14,7 @@ export function isType(type, val) {
  * @param {WeakMap} [map] - 循环引用处理的 WeakMap
  * @returns {*} 克隆出的对象
  */
-export function deepClone(target, map = new WeakMap()) {
+export function deepClone (target, map = new WeakMap()) {
   // 如果是原始值类型或者 null，则直接返回
   if (target === null || typeof target !== 'object') {
     return target
@@ -74,40 +74,3 @@ export function deepClone(target, map = new WeakMap()) {
 
   return cloneResult
 }
-
-const map = new Map()
-map.set('name', 'tools')
-
-const set = new Set()
-set.add('text')
-
-const obj = {
-  field: 1,
-  fieldUn: undefined,
-  fieldObj: {
-    age: 28
-  },
-  fieldArr: [2, 4, 8],
-  empty: null,
-  map,
-  set,
-  bool: new Boolean(true),
-  num: new Number(2),
-  str: new String(2),
-  symbol: Object(Symbol(1)),
-  date: new Date(),
-  reg: /\d+/,
-  error: new Error(),
-  fun: () => {
-    console.log('Hello!')
-  },
-  fun1: function(a, b) {
-    return a + b
-  }
-}
-// 测试
-// const copy = deepClone(obj);
-// console.log(copy)
-
-// obj.field = 3
-// console.log(obj)

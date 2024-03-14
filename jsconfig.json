@@ -1,12 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "ES2015",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true,
-    "lib": ["es6"]
+    "target": "esnext",
+    "module": "esnext",
   },
-  "include": ["ts/index.ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "test"],
+  "include": ["src/**/*"]
 }
