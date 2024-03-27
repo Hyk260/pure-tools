@@ -1,5 +1,5 @@
 import baseConfig from './rollup.config.base'
-import serve from 'rollup-plugin-serve'
+import serve from 'rollup-plugin-serve'// 支持启动本地服务器
 import livereload from 'rollup-plugin-livereload'
 
 export default {
@@ -7,12 +7,12 @@ export default {
   plugins: [
     ...baseConfig.plugins,
     serve({
-      port: 8080,
-      contentBase: ['dist', 'examples/brower'],
-      openPage: 'index.html'
+      port: 8888,
+      contentBase: ['examples'],
+      openPage: 'index.html',
     }),
     livereload({
-      watch: 'examples/brower'
+      watch: 'examples'
     })
   ]
 }

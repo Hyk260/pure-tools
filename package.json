@@ -17,8 +17,8 @@
     "es6"
   ],
   "scripts": {
-    "build:rollup:dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.js",
-    "build:rollup": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.js",
+    "dev": "rollup -w -c scripts/rollup.config.dev.js",
+    "build": "rollup -c scripts/rollup.config.prod.js",
     "build:webpack": "webpack --config scripts/webpack.config.js",
     "test": "jest",
     "lint": "eslint --fix src"

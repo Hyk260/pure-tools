@@ -6,29 +6,29 @@
  * @param {Boolean} immediate 是否立即执行
  * @return null
  */
-export function throttle (fn, wait = 300) {
-  let timer = null
+export function throttle(fn, wait = 300) {
+  let timer = null;
   return function (...args) {
-    const context = this
+    const context = this;
     if (!timer) {
       timer = setTimeout(() => {
-        timer = null
-        fn.apply(context, args)
-      }, wait)
+        timer = null;
+        fn.apply(context, args);
+      }, wait);
     }
-  }
+  };
 }
 
 /**
  * 节流函数 时间戳版
  */
-export function throttleCopy (fn, delay = 300) {
-  let last = 0
+export function throttleCopy(fn, delay = 300) {
+  let last = 0;
   return function (...args) {
-    const now = Date.now()
+    const now = Date.now();
     if (now - last > delay) {
-      last = now
-      fn.apply(this, args)
+      last = now;
+      fn.apply(this, args);
     }
-  }
+  };
 }

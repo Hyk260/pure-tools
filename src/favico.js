@@ -172,14 +172,14 @@ export const Favico = function (opt) {
             if (a in _queue[0].options) {
               _opt[a] = _queue[0].options[a];
             }
-          }
+          },
         );
         animation.run(
           _queue[0].options,
           function () {
             finished();
           },
-          false
+          false,
         );
       };
       if (_lastBadge) {
@@ -188,7 +188,7 @@ export const Favico = function (opt) {
           function () {
             run();
           },
-          true
+          true,
         );
       } else {
         run();
@@ -240,7 +240,7 @@ export const Favico = function (opt) {
         opt.x + opt.w,
         opt.y + opt.h,
         opt.x + opt.w - opt.h / 2,
-        opt.y + opt.h
+        opt.y + opt.h,
       );
       _context.lineTo(opt.x + opt.h / 2, opt.y + opt.h);
       _context.quadraticCurveTo(opt.x, opt.y + opt.h, opt.x, opt.y + opt.h - opt.h / 2);
@@ -270,13 +270,13 @@ export const Favico = function (opt) {
       _context.fillText(
         (opt.n > 9999 ? 9 : Math.floor(opt.n / 1000)) + "k+",
         Math.floor(opt.x + opt.w / 2),
-        Math.floor(opt.y + opt.h - opt.h * 0.2)
+        Math.floor(opt.y + opt.h - opt.h * 0.2),
       );
     } else {
       _context.fillText(
         opt.n,
         Math.floor(opt.x + opt.w / 2),
-        Math.floor(opt.y + opt.h - opt.h * 0.15)
+        Math.floor(opt.y + opt.h - opt.h * 0.15),
       );
     }
     _context.closePath();
@@ -321,13 +321,13 @@ export const Favico = function (opt) {
       _context.fillText(
         (opt.n > 9999 ? 9 : Math.floor(opt.n / 1000)) + "k+",
         Math.floor(opt.x + opt.w / 2),
-        Math.floor(opt.y + opt.h - opt.h * 0.2)
+        Math.floor(opt.y + opt.h - opt.h * 0.2),
       );
     } else {
       _context.fillText(
         opt.n,
         Math.floor(opt.x + opt.w / 2),
-        Math.floor(opt.y + opt.h - opt.h * 0.15)
+        Math.floor(opt.y + opt.h - opt.h * 0.15),
       );
     }
     _context.closePath();
@@ -443,7 +443,7 @@ export const Favico = function (opt) {
           function () {
             drawVideo(this);
           },
-          false
+          false,
         );
       } catch (e) {
         throw new Error("Error setting video. Message: " + e.message);
@@ -493,7 +493,7 @@ export const Favico = function (opt) {
               newVideo.play();
               drawVideo(newVideo);
             },
-            function () {}
+            function () {},
           );
         } catch (e) {
           throw new Error("Error setting webcam. Message: " + e.message);

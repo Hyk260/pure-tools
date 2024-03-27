@@ -4,8 +4,8 @@
  * @return {*}
  * isType('Array',[])
  */
-export function isType (type, val) {
-  return Object.prototype.toString.call(val) === `[object ${type}]`
+export function isType(type, val) {
+  return Object.prototype.toString.call(val) === `[object ${type}]`;
 }
 
 /**
@@ -14,63 +14,63 @@ export function isType (type, val) {
  * @param {WeakMap} [map] - 循环引用处理的 WeakMap
  * @returns {*} 克隆出的对象
  */
-export function deepClone (target, map = new WeakMap()) {
+export function deepClone(target, map = new WeakMap()) {
   // 如果是原始值类型或者 null，则直接返回
-  if (target === null || typeof target !== 'object') {
-    return target
+  if (target === null || typeof target !== "object") {
+    return target;
   }
   // 循环引用处理，如果已经克隆过该对象，则直接返回已有的克隆对象
   if (map.get(target)) {
-    return target
+    return target;
   }
 
-  const Ctor = target.constructor
-  const ctorName = Ctor.name
+  const Ctor = target.constructor;
+  const ctorName = Ctor.name;
 
   // 对于内置对象处理，如 RegExp、Date、Number、String、Boolean、Error
   if (/^(RegExp|Date|Number|String|Boolean|Error)$/i.test(ctorName)) {
-    return new Ctor(target)
+    return new Ctor(target);
   }
 
   // Symbol 对象的处理，创建一个新的 Symbol 对象并返回
-  if (ctorName === 'Symbol') {
-    return Object(Object.prototype.valueOf.call(target))
+  if (ctorName === "Symbol") {
+    return Object(Object.prototype.valueOf.call(target));
   }
 
   // Map 对象的处理
-  if (ctorName === 'Map') {
-    const cloneMap = new Map()
-    map.set(target, true)
+  if (ctorName === "Map") {
+    const cloneMap = new Map();
+    map.set(target, true);
 
     // 递归克隆 Map 对象的每个键值对
     target.forEach((value, key) => {
-      cloneMap.set(deepClone(key, map), deepClone(value, map))
-    })
-    return cloneMap
+      cloneMap.set(deepClone(key, map), deepClone(value, map));
+    });
+    return cloneMap;
   }
 
   // Set 对象处理
-  if (ctorName === 'Set') {
-    const cloneSet = new Set()
-    map.set(target, true)
+  if (ctorName === "Set") {
+    const cloneSet = new Set();
+    map.set(target, true);
 
     // 递归克隆 Set 对象的每个元素
     target.forEach((value) => {
-      cloneSet.add(deepClone(value, map))
-    })
-    return cloneSet
+      cloneSet.add(deepClone(value, map));
+    });
+    return cloneSet;
   }
 
   // 处理普通的对象或数组
-  map.set(target, true)
+  map.set(target, true);
 
-  const cloneResult = isType('Array', target) ? [] : {}
+  const cloneResult = isType("Array", target) ? [] : {};
 
   // 不克隆原型链上的属性 只克隆对象本身属性
   // 使用 Object.getOwnPropertyNames 获取对象本身所有属性的属性名组成的数组
   Object.getOwnPropertyNames(target).forEach((key) => {
-    cloneResult[key] = deepClone(target[key], map)
-  })
+    cloneResult[key] = deepClone(target[key], map);
+  });
 
-  return cloneResult
+  return cloneResult;
 }
