@@ -1,6 +1,7 @@
 node_modules
 /public
 /lib
+/examples
 scripts
 src
 test
@@ -10,5 +11,8 @@ test
 tsconfig.json
 babel.config.js
 webpack.config.js
+jsconfig.json
 .huskyrc
+.editorconfig
+prettier.config.js
 yarn.lock
