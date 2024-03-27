@@ -19,14 +19,13 @@ const banner =
 
 export default {
   input: 'src/index.js',
-  // input: 'ts/index.ts',
   output: [
-    {
-      file: `dist/${pkgName}.cjs.js`,
-      format: 'cjs',
-      name: pkgName,
-      banner
-    },
+    // {
+    //   file: `dist/${pkgName}.cjs.js`,
+    //   format: 'cjs',
+    //   name: pkgName,
+    //   banner
+    // },
     {
       file: `dist/${pkgName}.esm.js`,
       format: 'es',

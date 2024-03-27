@@ -1,5 +1,4 @@
 module.exports = {
-  trailingComma: "es5",
   useTabs: false,
   /** Tab 键的空格数 */
   tabWidth: 2,
